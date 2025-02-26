@@ -1,0 +1,426 @@
+@charset "utf-8";
+/*slickボタンとドットのカラーや位置改変*/
+.slick-prev::before, .slick-next::before{
+	color: #424358;
+	opacity: .5;
+}
+.pickup .slick-prev.slick-disabled::before, .pickup .slick-next.slick-disabled::before{
+	color: #424358;
+	opacity: .5;
+}
+.slick-dots li button:before {
+    opacity: .5;
+    color: #424358;
+}
+.mv .slick-dotted.slick-slider{
+    margin-bottom: calc(30px + 10rem);
+}
+
+.pickup .slick-list {
+    /*overflow: visible;*/
+}
+.pickup .prev_icon, .pickup .next_icon{
+	width: 15rem;
+	position: absolute;
+	z-index: 150;
+	opacity: .7;
+}
+.pickup .prev_icon:hover, .pickup .next_icon:hover{
+	opacity: 1;
+}
+.pickup .prev_icon{
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%)
+}
+.pickup .next_icon{
+	top: 50%;
+	right: 6rem;
+	transform: translateY(-50%)
+}
+
+
+
+/*テクノロジーセクションsticky化*/
+.technology.sticky-parent{
+	/*background-color: #ccc;*/
+  /*padding: 300px;*/
+  height: 400vh;
+}
+.technology .sticky-box{
+	 /*background-color: #009688;*/
+    width: 100%;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+/*aboutusセクションsticky化*/
+.aboutus.sticky-parent{
+	/*background-color: #ccc;*/
+  /*padding: 300px;*/
+  height: 400vh;
+	
+    
+}
+.aboutus .sticky-box{
+	 /*background-color: #009688;*/
+    width: 100%;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutus .sticky-box .sticky-content{
+padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bg-asian{
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+/*背景の制御*/
+
+.bg-chill, .bg-asian, .technology .target{
+	transition: .5s
+}
+
+.bg-asian.bg-show{
+	visibility: visible;
+	opacity: 1;
+}
+.bg-chill.bg-hide{
+    visibility: hidden;
+	opacity: 0;
+}
+.technology .target.bg-hide{
+    visibility: hidden;
+	opacity: 0;
+}
+
+/*テクノロジーセクションの動き*/
+.technology.section-pin {
+  overflow: visible;
+  view-timeline-name: --section-pin;
+  view-timeline-axis: block;
+}
+
+.technology .section-sticky {
+  overflow-x: hidden;
+}
+
+.technology .section-content {
+    
+    width: 100%;
+    height: 100%;
+  animation: horizontalScroll linear both;
+  animation-timeline: --section-pin;
+  animation-range: contain 0% contain 70%;
+}
+
+@keyframes horizontalScroll {
+  from {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/*aboutusセクションの動き*/
+/*.aboutus.section-pin {
+  overflow: visible;
+  view-timeline-name: --section-pin;
+  view-timeline-axis: block;
+}
+
+.aboutus .section-sticky {
+  overflow-x: hidden;
+}
+
+.aboutus .section-content {
+    width: 100%;
+    height: 100%;
+  animation: horizontalScroll linear both;
+  animation-timeline: --section-pin;
+  animation-range: contain 0% contain 70%;
+}*/
+.aboutus.section-pin {
+  overflow: visible;
+  view-timeline-name: --section-pin;
+  view-timeline-axis: block;
+}
+.aboutus .catchcopy.x-moving{
+	animation: horizontalScroll-Catchcopy linear both;
+  animation-timeline: --section-pin;
+  animation-range: contain 0% contain 50%;
+}
+
+@keyframes horizontalScroll-Catchcopy {
+  from {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.aboutus .text.x-moving{
+	animation: horizontalScroll-Text linear both;
+  animation-timeline: --section-pin;
+  animation-range: contain 50% contain 90%;
+}
+
+@keyframes horizontalScroll-Text {
+  from {
+    transform: translateX(50rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*nav-btn展開！！*/
+.open header .nav-btn span:nth-child(1), .open header .nav-btn span:nth-child(3){
+	top:1.5rem;
+}
+
+/*フッターのリンク下線*/
+footer a{
+    position: relative;
+}
+footer a::before{
+    content: "";
+    width: 0;
+    height:1px;
+    background-color: #fff;
+    transition: .5s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+footer a:hover::before{
+    width: 100%;
+}
+/*アコーディオンの下線*/
+header .acco-this a span{
+    position: relative;
+    display: inline-block;
+}
+header .acco-this a span::before{
+    content: "";
+    width: 0;
+    height:1px;
+    background-color: #fff;
+    transition: .5s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+header .acco-this a:hover span::before{
+    width: 100%;
+}
+
+/*productのアイコンホバー*/
+.product .type-area .box, .product .type-area .box:hover .image img{
+    transition: .5s;
+}
+.product .type-area .box{
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.product .type-area .box::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #cfa74c;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    transition: .5s;
+    transform: scale(0) rotate(0deg);
+    z-index: -1;
+}
+.product .type-area .box:hover::before{
+    transform: scale(1) rotate(180deg);
+}
+
+
+/*
+.product .type-area .box:hover{
+    background-color: #000;
+}
+*/
+.product .type-area .box:hover .image img{
+    filter: invert(100%);
+    
+}
+.product .type-area .box:hover h4{
+    color: #fff;
+}
+
+/*プロダクトuse-areaのホバー*/
+.product .use-area .box{
+    position: relative;
+    z-index: 0;
+    transition: .3s;
+}
+.product .use-area .box::before{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #cfa74c;
+    z-index: -1;
+    border-radius:2rem;
+    transition: .3s;
+    opacity: 0;
+}
+.product .use-area .box:hover{
+    border: 1px solid rgb(0,0,0,0);
+    color: #fff;
+}
+.product .use-area .box:hover::before{
+    left: 0;
+    opacity: 1;
+    
+    
+}
+
+
+/*ローディングのアニメーションに関する部分*/
+.loading {
+  width: 100%;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #424358;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30000;
+  opacity: 0;
+  visibility: hidden;
+}
+.loading .kijun{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.loading .flx-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	width: 27.8rem;
+	height: 21rem;
+	/*aspect-ratio:1/1;*/
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.loading-animation {
+  height: 7rem;
+  
+  transition: all 1s;
+  z-index: 2001;
+	
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+	
+  opacity: 0;
+  visibility: hidden;
+}
+.loading-animation img{
+	height: 100%;
+	width: auto;
+}
+.loading-animation:nth-child(2) img{
+	position: relative;
+	left:9.0rem;
+}
+.loading-animation:nth-child(3){
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.loading.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-animation.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.white-maku{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 29999;
+    background-color: #fff;
+}
+
+
+.slick-slider.slick-rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.slick-slider.slick-rtl .slick-track {
+    flex-direction: row-reverse;
+}
+
+.sp .slick-track {
+    transform: initial;
+}
+
+/*ヘッダーピストン用*/
+header{
+    transition: .5s;
+}
+header.hidden {
+    transform: translate(-50%, -12rem);
+}
+
+
+
+
+@media (max-width:1000px){
+    .pickup .prev_icon, .pickup .next_icon{
+	width: 8rem;
+}
+}
+
+
+
+

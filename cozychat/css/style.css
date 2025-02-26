@@ -1,0 +1,790 @@
+@charset "utf-8";
+html {
+	font-size: 62.5%;
+	scroll-behavior:smooth;
+}
+
+*, ::before, ::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    max-width: 100%;
+}
+body {
+	background-color: #F5EFE6;
+	font-family: "Kiwi Maru", serif;
+}
+
+
+ul {
+	list-style-type: none;
+}
+.nowrap {
+	white-space: nowrap;
+}
+
+
+.bg {
+	width: 50%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+.bg-img {
+	width: 100%;
+	height: 100%;
+}
+
+.bg-img img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.bg-text1, .bg-text2{
+	/*border-radius: 2rem;
+	background-color: rgba(255,255,255,0.70);*/
+	color: #fff;
+	padding: 2rem;
+	font-size: 2.8rem;
+	text-shadow:2px 2px 10px #F68657, -2px 2px 10px #F68657, 2px -2px 10px #F68657, -2px -2px 10px #F68657;
+}
+.sp-mv-text{
+	text-shadow:2px 2px 10px #F68657, -2px 2px 10px #F68657, 2px -2px 10px #F68657, -2px -2px 10px #F68657;
+	color: #fff;
+} 
+.bg-text1 {
+	position: absolute;
+	top: 20%;
+	left: 7%;
+}
+.bg-text2 {
+	position: absolute;
+	bottom: 16%;
+	right: 7%;
+}
+
+
+
+.sidemenu {
+	background-color: #F6B352;
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 0 2rem;
+	justify-content: space-between;
+	width: 16%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 0;
+}
+.sidemenu .menu {
+	font-size: 1.6rem;
+}
+.sidemenu .menu li {
+	width: 100%;
+}
+.sidemenu .menu a {
+	color: #FFFFFF;
+	padding: .6rem 0 .6rem 2rem;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+}
+.sidemenu .menu a:hover {
+	background-color: #FFFFFF;
+	color: #F6B352;
+}
+
+
+
+.sns {
+	display: flex;
+	justify-content: center;
+}
+
+.sns-logo {
+	width: 3rem;
+}
+.sns-logo:last-child {
+	margin-left: 2rem;
+}
+
+.container {
+	width: 34%;
+	top: 0px;
+	padding: 11rem 2rem 0;
+	margin-left: 50%;
+	font-size: 1.4rem;
+	color: #707070;
+}
+header {
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	width: 34%;
+	display: flex;
+	padding: 2rem;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 0;
+	transition: transform 0.5s;
+}
+header.hidden {
+    transform: translateY(-9rem);
+}
+.logo {
+	width: 8rem;
+}
+
+.nav-btn {
+	width: 4rem;
+	height: 4.8rem;
+	position: relative;
+	display: none;
+	cursor: pointer;
+}
+.nav-btn span {
+	position: absolute;
+	width: 3.2rem;
+	left: 0.4rem;
+	height: 0.2rem;
+	background-color: #F6B352;
+}
+.nav-btn span:nth-child(1) {
+	top: 1.1rem;
+}
+.nav-btn span:nth-child(2) {
+	top: 2.3rem;
+}
+.nav-btn span:nth-child(3) {
+	top: 3.5rem;
+}
+.mv {
+	margin-bottom: 4rem;
+}
+section {
+	margin-bottom: 8rem;
+}
+h2 {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 2.4rem;
+}
+h2 span {
+	color: #FFFFFF;
+	border-radius: 50%;
+	background-color: #F6B352;
+	font-size: 2.6rem;
+	width: 3.6rem;
+	height: 3.6rem;
+	display: inline-block;
+}
+dl {
+	display: flex;
+	flex-wrap: wrap;
+}
+dt {
+	width: 34%;
+}
+dd {
+	width: 64%;
+	margin-left: 2%;
+	margin-bottom: 1rem;
+}
+dd:last-child {
+	margin-bottom: 0px;
+}
+
+.text  {
+	text-align: center;
+}
+.shop .text {
+	margin-top: 2rem;
+}
+.shop .gazou {
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+
+
+.calendar .box {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	flex-direction: column;
+	border-radius: 1rem;
+	background-color: #FFFFFF;
+	margin-bottom: 1rem;
+}
+.calendar .box h3 {
+	font-weight: normal;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+.calendar table {
+	border-collapse: collapse;
+	border: 0.1rem solid #F6B352;
+}
+
+
+.calendar th {
+	font-weight: normal;
+}
+.calendar th, .calendar td {
+	padding: .4rem;
+}
+.calendar tr td:nth-child(1) , .calendar tr td:nth-child(3){
+	background-color: #CBCACA;
+}
+.calendar tr:nth-child(1) {
+	border-bottom: 0.1rem solid #F6B352;
+}
+footer {
+	color: #B3B3B3;
+}
+
+footer .logo {
+	width: 6rem;
+}
+.footer-top {
+	display: flex;
+	align-items: center;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #B3B3B3;
+	padding-left: 2rem;
+}
+.footer-top .name {
+	font-size: 1.8rem;
+	margin-left: 1rem;
+}
+.menu-box {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+}
+.menu2 {
+	margin-left: 5rem;
+}
+footer .menu a, footer .menu2 a {
+	padding: .6rem 0;
+	color: #B3B3B3;
+	display: flex;
+	text-decoration: none;
+}
+footer .menu a:hover, footer .menu2 a:hover {
+	opacity: .7;
+}
+.arrow {
+	width: 8px;
+	top: -2px;
+	position: relative;
+	right: -10px;
+	flex-shrink: 0;
+}
+
+
+
+.copyright {
+	text-align: center;
+	margin-top: 6rem;
+}
+.dammy-menu {
+    display: none;
+}
+.sp-mv-text {
+	display: none;
+}
+.br-switch {
+	display: none;
+}
+/*アニメーション*/
+/*ローディング(ファーストビュー)*/
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 5550;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .txt {
+  font-size: 45px;
+  font-weight: bold;
+  color: #F68657;
+	background-color: #fff;
+  display: none;
+}
+/*カルーセル*/
+.slide {
+  width: 100%;
+height:100%;
+ overflow: hidden; /* 画像がはみ出ないようにする */
+}
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15); /* 拡大率 */
+  }
+}
+.add-animation {
+  animation: zoomUp 10s linear 0s normal both;
+}
+
+/*スクロール*/
+.scroll-area{
+	position: relative;
+	padding: 2rem 0;
+	margin-bottom: 2rem;
+}
+.scroll{
+	position: absolute;
+	bottom:0px;
+	right:26px;
+}
+.scroll span{
+	/*描画位置*/
+	position: absolute;
+	left: 10px;
+	bottom: 5px;
+	/*テキストの形状*/
+	color: #707070;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	writing-mode:vertical-rl;
+}
+.scroll::before{
+	content: "";
+	z-index: 1;
+		/*描画位置*/
+	position: absolute;
+	bottom:0;
+	left:-4px;
+  /*丸の形状*/
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background-color: #F6B352;
+	/*丸の動き*/
+	animation: circlemove 1.6s ease-in-out infinite, circlemovehide 1.6s ease-out infinite;
+}
+/*下降*/
+@keyframes circlemove{
+	0%{bottom: 40px;}
+	100%{bottom: -5px;}
+}
+/*透過＞不透明＞透過*/
+@keyframes circlemovehide{
+	0%{opacity: 0}
+	50%{opacity: 1;}
+	80%{opacity: 0.9;}
+	100%{opacity: 0;}
+}
+/*線の描写*/
+.scroll::after{
+	content: "";
+	/*描画位置*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/*線の形状*/
+	width: 1px;
+	height: 42px;
+	background-color: #707070;
+}
+/*もじブラー出現*/
+.blur{
+	animation-name:blurAnime;
+	animation-duration:5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+ 
+.blurTrigger{
+    opacity: 0;
+}
+
+
+.pagetop .arrow {
+	width: 1.4rem;
+	position: static;
+}
+
+.pagetop {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    right: 18%;
+    bottom: 2rem;
+    background: #fff;
+    /*border: solid 2px #000;*/
+    border-radius: 50%;
+    display: flex;
+	  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+	  opacity: .7;
+	text-decoration: none;
+	color: #F68657;
+	box-shadow: 2px 2px 2px #cbcaca;
+}
+.pagetop:hover{
+	opacity: 1;
+}
+
+
+/*今回はローディング要らんかも
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 555;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .txt {
+  font-size: 45px;
+  font-weight: bold;
+  color: rgb(30, 50, 93);
+  display: none;
+}
+.loader .circles-to-rhombuses-spinner{
+  display: none;
+	これfade-inでdisplay:blockかなんかに上書きしちゃうんで、このままだとだめです（横並びが壊れる）
+	・noneしたいdivの下にもう一個flex用のdivをつける
+  ・jsで最初非表示にしておく$(".class-name").hide();
+}
+.circles-to-rhombuses-spinner, .circles-to-rhombuses-spinner * {
+      box-sizing: border-box;
+    }
+
+    .circles-to-rhombuses-spinner {
+      height: 15px;
+      width: calc( (15px + 15px * 1.125) * 3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circles-to-rhombuses-spinner .circle {
+      height: 15px;
+      width: 15px;
+			margin-left: calc(15px * 1.125);
+      transform: rotate(45deg);
+      border-radius: 10%;
+      border: 3px solid #ff1d5e;
+      overflow: hidden;
+      background: transparent;
+      animation: circles-to-rhombuses-animation 1200ms linear infinite;
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(1) {
+      animation-delay: calc(150ms * 1);
+      margin-left: 0;
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(2) {
+      animation-delay: calc(150ms * 2);
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(3) {
+      animation-delay: calc(150ms * 3);
+    }
+
+    @keyframes circles-to-rhombuses-animation {
+      0% {
+        border-radius: 10%;
+      }
+      17.5% {
+        border-radius: 10%;
+      }
+      50% {
+        border-radius: 100%;
+      }
+      93.5% {
+        border-radius: 10%;
+      }
+      100% {
+        border-radius: 10%;
+      }
+    }
+
+    @keyframes circles-to-rhombuses-background-animation {
+      50% {
+        opacity: 0.4;
+      }
+    }
+*/
+
+
+
+
+
+
+@media (max-width:940px){
+.bg {
+	width: 100%;
+	opacity: .8;
+	z-index: -1;
+}
+.container   {
+	position: static;
+}
+header {
+	width: auto;
+	left: 25%;
+	z-index: 1;
+}
+
+
+.container {
+	background-color: #F5EFE6;
+	margin-left: 0px;
+}
+.sidemenu {
+    height: 100vh;
+    left: 59%;
+
+}
+.sidemenu .menu a {
+    padding-right: 2rem;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.dammy-menu {
+    width: 16%;
+    background-color: #F6B352;
+    height: 100vh;
+    display: block;
+}
+
+.hide-bg-text {
+	display: none;
+}
+.sp-mv-text {
+	display: inline;
+	font-size: 1.6rem;
+	padding: 0;
+	background-color: rgba(255,255,255,0.00);
+}
+.mv {
+	position: relative;
+	padding-top: 60px;
+	margin-bottom: 10rem;
+}
+.bg-text1 {
+	top: 0px;
+	left: 0px;
+}
+.bg-text2 {
+	bottom: -60px;
+	right: 0px;
+}
+	.pagetop {
+    right: 3rem;
+    bottom: 3rem;
+}
+
+
+
+
+
+
+
+
+}
+
+@media (max-width:800px){
+dl {
+	display: block;
+}
+dd , dt{
+	width: 100%;
+}
+
+dd {
+	margin-left: 1.4rem;
+}
+.bg-text2 {
+	margin-right: -2rem;
+}
+.calendar .box {
+	border-radius: 0;
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+.shop .br-switch {
+	display: block;
+}
+
+
+
+
+
+
+}
+
+@media (max-width:700px){
+.container {
+	max-width: 70rem;
+	width: auto;
+}
+.nav-btn {
+	display: block;
+}
+
+.dammy-menu {
+	display: none;
+}
+.main-content {
+	display: block;
+}
+.shop .br-switch {
+	display: none;
+}
+.calendar .box {
+	border-radius: 1rem;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+/*ブラウザ幅の変化でもトランジションが効いてしまう問題の解消法として、
+	.siemenuの外側に表示制御専用のdivタグをつけてみてはとご教示いただいたが、
+	display:none→blockの場合、下部要素のトランジションも無効になってしまう
+	opacityとvisiblityの場合だと、ON時はよいがoff時にトランジションが無効になってしまう。
+	ブラウザ幅(デバイスの画面サイズではなく)の変化には対応しない（アニメーション使う場合はとくに）こともあるとのことなので、いったん放置しておく。
+.no-trans {
+		opacity: 0;
+	visibility: hidden;
+}
+.menu-open .no-trans {
+		opacity: 1;
+	visibility: visible;
+}
+*/
+	
+.sidemenu {
+	width: 100%;
+	left: auto;
+	z-index: 555;
+	/* [disabled]display: none; */
+	text-align: center;
+	margin-top: 7.8rem;
+	padding-top: 6rem;
+	justify-content: flex-start;
+	transition: .8s;
+	transform: translateX(100%);
+	opacity: 0.5;
+}
+
+
+.menu-open .sidemenu {
+	/* [disabled]display: flex; */
+	transform: translateX(0);
+	opacity: 1;
+}
+.sidemenu .menu a {
+	padding: 2rem 2rem;
+	font-size: 2rem;
+	left: auto;
+}
+.sns {
+	margin-top: 6rem;
+}
+.nav-btn span {
+	transition: .8s ease-out;
+}
+
+.menu-open .nav-btn span:nth-child(1) {
+	transform: rotate(135deg);
+	top: 2.3rem;
+}
+.menu-open .nav-btn span:nth-child(2) {
+	width: 0px;
+	transform: translateX(1.6rem);
+}
+
+.menu-open .nav-btn span:nth-child(3) {
+	transform: rotate(-135deg);
+	top: 2.3rem;
+}
+
+
+.bg-text1, .bg-text2 {
+	/*border-radius: 1rem;
+	background-color: rgba(255, 255, 255, 0.70);
+	color: #F68657;*/
+	padding: 1rem;
+	font-size: 2rem;
+}
+.bg-text1 {
+	top: 7rem;
+	right: 1rem;
+	left: auto;
+}
+.bg-text2 {
+	bottom: 1rem;
+	left: 1rem;
+	right: auto;
+	margin-right: 0px;
+}
+header {
+	left: 0px;
+	width: 100%;
+}
+.container{
+	padding-top: 3rem;
+}
+.mv{
+		margin-bottom: 4rem;
+	}
+
+
+
+
+
+}
+
+@media (max-width:460px){
+.bg-text1, .bg-text2 {
+	padding: 2.1vw;
+	font-size: 4.3vw;
+}
+}
