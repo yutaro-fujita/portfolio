@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*自分でリセット*/
+*, ::before, ::after{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 62.5%;
+}
+img{
+	width:100%;
+	height: auto;
+	vertical-align: bottom;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
